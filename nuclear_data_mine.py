@@ -14,6 +14,10 @@ minmag = 100000
 listSort = []
 index = 1
 
+num1 = 0
+num2 = 0
+num3 = 0
+num4 = 0
 for i in range(0,len(mainList)):
 
 	line = mainList[i].split()
@@ -85,6 +89,7 @@ for i in range(0,len(mainList)):
 					result2.append(listX)
 					result3.append(listX)
 					result4.append(listX)
+					num1 += 1
 
 
 				elif(int(year[0:2]) < 75):
@@ -92,18 +97,21 @@ for i in range(0,len(mainList)):
 					result2.append(listT)
 					result3.append(listX)
 					result4.append(listX)
+					num2 += 1
 
 				elif(int(year[0:2]) < 85):		
 					result1.append(listX)
 					result2.append(listX)
 					result3.append(listT)
 					result4.append(listX)
+					num3 += 1
 
 				else:
 					result1.append(listX)
 					result2.append(listX)
 					result3.append(listX)
 					result4.append(listT)
+					num4 += 1
 	
 				index+=1
 
@@ -130,12 +138,29 @@ for i in range(len(listSort)):
 			result4[j][2] = listSort[i][2]
 		
 
+ind1 = num1
+ind2 = num1+num2
+ind3 = num1+num2+num3
+
+listO = []
+listO.extend(result1[0:ind1-1])
+listO.extend(result2[ind1-1:ind2-1])
+listO.extend(result3[ind2-1:ind3-1])
+listO.extend(result4[ind3-1:])
+
+print len(listO)
+print len(result1)
+print result1[0:num1-1]
+print result2[num1-1:num2]
+
+resultX = []
 resultA = []
 resultB = []
 resultC = []
 resultD = []
 
 for i in range(len(result1)):
+	resultX.extend(listO[i][0:3])
 	resultA.extend(result1[i][0:3])
 	resultB.extend(result2[i][0:3])
 	resultC.extend(result3[i][0:3])
@@ -144,12 +169,14 @@ for i in range(len(result1)):
 
 bigString = "["
 bigString += " [\"1\", "
-bigString += str(resultA[0:])#list(resultN[0]))#resultN[0][0:3*len(resultN[0])//3])
+bigString += str(resultX[0:])#list(resultN[0]))#resultN[0][0:3*len(resultN[0])//3])
 bigString += "], [\"2\", "
-bigString += str(resultB[0:])#str(list(resultN[1]))#str(resultN[1][0:3*len(resultN[1])//3])
+bigString += str(resultA[0:])#list(resultN[0]))#resultN[0][0:3*len(resultN[0])//3])
 bigString += "], [\"3\", "
-bigString += str(resultC[0:])#str(list(resultN[2]))#str(resultN[2][0:3*len(resultN[2])//3])
+bigString += str(resultB[0:])#str(list(resultN[1]))#str(resultN[1][0:3*len(resultN[1])//3])
 bigString += "], [\"4\", "
+bigString += str(resultC[0:])#str(list(resultN[2]))#str(resultN[2][0:3*len(resultN[2])//3])
+bigString += "], [\"5\", "
 bigString += str(resultD[0:])#str(list(resultN[2]))#str(resultN[2][0:3*len(resultN[2])//3])
 bigString += "]]"
 
