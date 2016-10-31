@@ -93,7 +93,7 @@ for i in range(0,len(mainList)):
 					result3.append(listX)
 					result4.append(listX)
 
-				elif(int(year[0:2]) < 80):		
+				elif(int(year[0:2]) < 85):		
 					result1.append(listX)
 					result2.append(listX)
 					result3.append(listT)
