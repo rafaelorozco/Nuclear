@@ -106,20 +106,20 @@
   <div id="container"></div>
 
   <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
+    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by Rafael Orozco <span class="bull">&bull;</span> Data acquired from <a href="http://www.okgeosurvey1.gov/">UniversityOfOklahoma</a>
   </div>
 
   <div id="currentInfo">
-    <span id="year1" class="year">1945</span>
-    <span id="year2" class="year">1950</span>
-    <span id="year3" class="year">3</span>
-    <span id="year4" class="year">4</span>
+    <span id="year1" class="year">1945 - 1965</span>
+    <span id="year2" class="year">1966 - 1975</span>
+    <span id="year3" class="year">1975 - 1985</span>
+    <span id="year4" class="year">1985 - </span>
    
     
   </div>
 
   <div id="title">
-    Nuclear Weapon Detotonations
+    Nuclear Weapon Detonations
   </div>
 
   <a id="ce" href="http://www.chromeexperiments.com/globe">
@@ -136,9 +136,7 @@
       Detector.addGetWebGLMessage();
     } else {
 
-      //<span id="year2000" class="year">2000</span>
-
-      var years = ['1','2','3','4'];//,'2000'];
+      var years = ['1','2','3','4'];
       var container = document.getElementById('container');
       var globe = new DAT.Globe(container);
 
