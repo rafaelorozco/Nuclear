@@ -7,3 +7,5 @@ a single detonation. The height of the line is the yeild of the bomb.
 
 The heart of the program is nuc_data_mine.py
 which produces the json file required for the visualization.
+
+nucdata.txt includes the unprocessed data.
