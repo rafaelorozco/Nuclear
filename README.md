@@ -1,4 +1,4 @@
-# nuc
+# Nuclear Weapon 3d Visualization
 
 This is my submission for the CAPITAL ONE global visualization competition.
 
